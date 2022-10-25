@@ -1,0 +1,23 @@
+alcohol subway bind copper lottery other apart lion harvest rough fall near
+
+near create-account greeting.nayneshrathod.testnet
+
+near create-account greeting.nayneshrathod.testnet --masterAccount nayneshrathod.testnet --initialBalance 10
+
+yarn add asbuild
+
+yarn asb
+
+near dev-deploy
+
+near dev-deploy build/release/assemblyscriptcontract.wasm  
+
+
+near deploy --contractName=greeting.nayneshrathod.testnet --keyPath=/home/gitpod/.near-credentials/testnet/greeting.nayneshrathod.testnet.json --wasmFile=/workspace/AssemblyScriptContract/build/release/assemblyscriptcontract.wasm
+
+near call greeting.nayneshrathod.testnet getGreeting '{"accountId": "greeting.nayneshrathod.testnet"}' --accountId nayneshrathod.testnet
+
+near call greeting.nayneshrathod.testnet setGreeting '{"greeting": "Hello World"}' --accountId nayneshrathod.testnet
+
+near call greeting.nayneshrathod.testnet getGreeting '{"accountId": "nayneshrathod.testnet"}' --accountId nayneshrathod.testnet
+
