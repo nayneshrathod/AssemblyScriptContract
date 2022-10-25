@@ -21,3 +21,14 @@ near call greeting.nayneshrathod.testnet setGreeting '{"greeting": "Hello World"
 
 near call greeting.nayneshrathod.testnet getGreeting '{"accountId": "nayneshrathod.testnet"}' --accountId nayneshrathod.testnet
 
+---------------------------------------------------------------
+
+yarn asb
+
+near deploy --contractName=greeting.nayneshrathod.testnet --keyPath=/home/gitpod/.near-credentials/testnet/greeting.nayneshrathod.testnet.json --wasmFile=/workspace/AssemblyScriptContract/build/release/assemblyscriptcontract.wasm
+
+near call greeting.nayneshrathod.testnet getGreeting '{"accountId": "greeting.nayneshrathod.testnet"}' --accountId nayneshrathod.testnet
+
+near call greeting.nayneshrathod.testnet setGreeting '{"greeting": "Hello World"}' --accountId nayneshrathod.testnet
+
+near call greeting.nayneshrathod.testnet getGreeting '{"accountId": "nayneshrathod.testnet"}' --accountId nayneshrathod.testnet
